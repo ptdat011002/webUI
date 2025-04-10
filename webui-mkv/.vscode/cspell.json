@@ -1,0 +1,17 @@
+{
+  "words": [
+    "antd",
+    "endregion",
+    "sider",
+    "matchs",
+    "noti",
+    "rssi",
+    "Pavana",
+    "cnonce",
+    "csrftoken",
+    "manualfacturer",
+    "languagedetector",
+    "topbar"
+  ],
+  "ignorePaths": ["**/vi.json"]
+}

@@ -1,0 +1,7 @@
+echo "Linting..."
+
+yarn lint
+
+echo "Lint Success!"
+
+yarn build:packages

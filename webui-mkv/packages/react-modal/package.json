@@ -1,0 +1,31 @@
+{
+  "name": "@packages/react-modal",
+  "version": "1.0.0",
+  "packageManager": "yarn@4.1.0",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "private": true,
+  "sideEffects": false,
+  "scripts": {
+    "build": "kit build-package .",
+    "dev": "kit watch-package ."
+  },
+  "dependencies": {
+    "@packages/ds-core": "^1.0.0",
+    "@packages/ds-icons": "^1.0.0",
+    "@packages/react-helper": "^1.0.0",
+    "antd": "^5.15.1",
+    "lodash": "^4.17.21",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@packages/kit": "1.0.0",
+    "@storybook/react": "^7.6.17",
+    "prop-types": "^15.8.1",
+    "storybook": "^7.6.17"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  }
+}

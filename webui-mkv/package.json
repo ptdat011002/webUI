@@ -1,0 +1,56 @@
+{
+  "name": "pavana-local-website",
+  "packageManager": "yarn@3.6.3",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "sites/*"
+  ],
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=10.0.0"
+  },
+  "scripts": {
+    "lint": "eslint --ext .ts,.tsx --ignore-path .eslintignore .",
+    "build:packages": "yarn nx run-many --target=build --exclude '@sites/*' '@services/*' --parallel=5",
+    "storybook": "yarn workspace @sites/storybook storybook",
+    "build:local-website": "yarn workspace @sites/local-website build",
+    "dev": "yarn workspace @sites/local-website dev",
+    "generate:icons": "yarn workspace @sites/local-website generate:icons && eslint . --fix --quiet",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.24.1",
+    "@types/node": "^20.11.25",
+    "@types/wicg-file-system-access": "^2023.10.5",
+    "@typescript-eslint/eslint-plugin": "^5.39.0",
+    "@typescript-eslint/parser": "^5.39.0",
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.0.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "glob-promise": "^6.0.5",
+    "husky": "^9.0.11",
+    "nx": "^16.6.0",
+    "prettier": "^2.7.1",
+    "ts-api-utils": "^1.3.0",
+    "tslib": "^2.4.0",
+    "typescript": "5.1.6"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix"
+    ]
+  },
+  "dependencies": {
+    "@types/styled-components": "^5.1.34",
+    "i18next-browser-languagedetector": "^7.2.1",
+    "i18next-http-backend": "^2.5.0",
+    "idb": "^8.0.0",
+    "jsencrypt": "^3.3.2",
+    "styled-components": "^6.1.16"
+  }
+}

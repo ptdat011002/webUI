@@ -1,0 +1,24 @@
+image: node:18.19.0-alpine
+
+stages:
+  - install
+  - lint
+
+variables:
+  NODE_VERSION: '14.17.0'
+
+install_dependencies:
+  stage: install
+  script:
+    - echo "Installing dependencies..."
+    - yarn install
+  cache:
+    key:
+      files:
+        - yarn.lock
+    policy: pull-push
+
+lint:
+  stage: lint
+  script:
+    - yarn lint

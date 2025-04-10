@@ -1,0 +1,52 @@
+export interface IImageProperties {
+  zoom_step: number;
+  focus_step: number;
+  focus: 'auto';
+}
+
+// PTZ_CMD_UP=1,
+// PTZ_CMD_DOWN=2,
+// PTZ_CMD_LEFT=3,
+// PTZ_CMD_RIGHT=4,
+// PTZ_CMD_UP_LEFT=5,
+// PTZ_CMD_UP_RIGHT=6,
+// PTZ_CMD_DOWN_LEFT=7,
+// PTZ_CMD_DOWN_RIGHT=8,
+// PTZ_CMD_ZOOM_IN=9,
+// PTZ_CMD_ZOOM_OUT=10,
+// PTZ_CMD_FOCUS_NEAR=11,
+// PTZ_CMD_FOCUS_FAR=12,
+// PTZ_CMD_FOCUS_AUTO=13,
+// PTZ_CMD_CFG_STEP=14,
+
+export enum PTZCommand {
+  PTZ_CMD_UP = 1,
+  PTZ_CMD_DOWN,
+  PTZ_CMD_LEFT,
+  PTZ_CMD_RIGHT,
+  PTZ_CMD_UP_LEFT,
+  PTZ_CMD_UP_RIGHT,
+  PTZ_CMD_DOWN_LEFT,
+  PTZ_CMD_DOWN_RIGHT,
+  PTZ_CMD_ZOOM_IN,
+  PTZ_CMD_ZOOM_OUT,
+  PTZ_CMD_FOCUS_NEAR,
+  PTZ_CMD_FOCUS_FAR,
+  PTZ_CMD_FOCUS_AUTO,
+  PTZ_CMD_CFG_STEP,
+  PTZ_CMD_IRIS_REDUCE,
+  PTZ_CMD_IRIS_EXTEND,
+  PTZ_CMD_IRIS,
+  PTZ_CMD_DEFAULT,
+}
+
+export enum SlowShutterMode {
+  SLOW_SHUTTER_OFF = 0,
+  SLOW_SHUTTER_ON,
+}
+
+export enum AntiFlickerMode {
+  ANTI_FLICKER_OFF = 2,
+  ANTI_FLICKER_60HZ = 1,
+  ANTI_FLICKER_50HZ = 0,
+}
